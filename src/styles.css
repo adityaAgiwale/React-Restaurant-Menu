@@ -1,0 +1,155 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App > h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.SpaceLine {
+  width: 40px;
+  height: 3px;
+  margin: 5px 0px 30px;
+  background-color: darkorange;
+}
+
+.menuItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuList > img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 15px;
+  border: 4px solid orange;
+}
+
+.dishBasic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dishName {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.dishPrice {
+  color: orange;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+.dishDesc {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* Navigation */
+.Navigation__Menu {
+  margin: 0px 0px 40px;
+}
+.category__button {
+  padding: 10px 15px;
+  margin: 20px 15px;
+  background: transparent;
+  border: 2px solid orange;
+  border-radius: 6px;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+.category__button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: orange;
+  transition: 0.3s ease-in-out;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .menuItems {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+/* Tab */
+@media (max-width: 660px) {
+  .menuList > img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px;
+    border: 4px solid orange;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    margin: 0px 10px 20px;
+  }
+  .menuList > img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px;
+    border: 4px solid orange;
+  }
+  .dishBasic {
+    align-items: flex-start;
+  }
+
+  .dishName {
+    font-size: 16px;
+  }
+  .dishDesc {
+    font-size: 13px;
+  }
+  .Navigation__Menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .category__button {
+    width: 100%;
+    margin: 2px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .menuList > img {
+    margin: 0px;
+  }
+  .category__button {
+    margin: 0px 4px;
+  }
+}
